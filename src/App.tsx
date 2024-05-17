@@ -1,18 +1,26 @@
+import Header from "./components/Header"
+import Sidebar from "./components/SideNav"
 import { Dashboard } from "./pages/Dashboard"
 
 
 function App() {
 
   return (
-    <>
-      {/* Header */}
-
-
+    <div className="flex ">
       {/* Side nav */}
+      <Sidebar />
 
-      {/* Main page */}
-      <Dashboard />
-    </>
+      <div className="w-full">
+        {/* Header */}
+        <Header />
+
+        {/* Main page */}
+        <Dashboard />
+
+      </div>
+
+
+    </div>
   )
 }
 
