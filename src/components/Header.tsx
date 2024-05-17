@@ -7,7 +7,7 @@ function Header() {
                     <p className="font-semibold">Amanuel Belay</p>
                     <p className="text-sm">Medical Doctor</p>
                 </div>
-                <img src='src/assets/profilepic.jpeg' width={50} className="rounded-full" />
+                <img src='/assets/profilepic.jpeg' width={50} className="rounded-full" />
             </div>
         </div>
 

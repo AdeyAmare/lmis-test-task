@@ -42,7 +42,7 @@ const CertificationTable = () => {
             header: 'Name',
             cell: (cell) => {
                 const combinedName = combineNames(cell.row.original);
-                return <div className='flex items-center gap-x-2'><img src='src/assets/profilepic.jpeg' width={40} className="rounded-full" />{combinedName}</div>;
+                return <div className='flex items-center gap-x-2'><img src='/assets/profilepic.jpeg' width={40} className="rounded-full" />{combinedName}</div>;
             },
         }),
         columnHelper.accessor('assessed', {

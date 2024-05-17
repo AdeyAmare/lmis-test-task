@@ -89,10 +89,10 @@ const CoCByMonthChart = () => {
                             <stop offset="100%" stopColor="white" />
                         </linearGradient>
                     </defs>
-                    <XAxis dataKey="month" tickFormatter={formatShortMonth} label={{ fontSize: 4 }} />
+                    <XAxis dataKey="month" tickFormatter={formatShortMonth} tick={{ fontSize: 10 }} />
                     <YAxis />
                     <Tooltip />
-                    <Line type="monotone" dataKey="value" stroke="url(#colorUv)" strokeWidth={4} activeDot={{ r: 0 }} />
+                    <Line type="monotone" dataKey="value" stroke="url(#colorUv)" strokeWidth={4} dot={{ r: 0 }} />
                 </LineChart>
             </div>
 
