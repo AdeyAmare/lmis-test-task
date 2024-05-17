@@ -64,7 +64,7 @@ const CustomPieChart = () => {
                             outerRadius={80}
 
                         >
-                            {competencyData.map((entry, index) => (
+                            {competencyData.map((_entry, index) => (
                                 <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
                             ))}
                         </Pie>

@@ -1,4 +1,4 @@
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip } from 'recharts';
 import { formatShortMonth } from '../utils/formatting';
 import { useEffect, useRef, useState } from 'react';
 import { useCocData } from '../hooks/useCocData';

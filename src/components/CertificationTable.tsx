@@ -1,7 +1,6 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useCertData } from '../hooks/useCertData';
-import { useReactTable, createColumnHelper, getCoreRowModel, flexRender, getPaginationRowModel, getFilteredRowModel, getSortedRowModel, SortingState } from '@tanstack/react-table';
-import { ActionComponent } from './ActionComponent';
+import { useReactTable, createColumnHelper, getCoreRowModel, flexRender, getPaginationRowModel, getFilteredRowModel, getSortedRowModel } from '@tanstack/react-table';
 import { combineNames } from '../utils/formatting';
 import { IoEye } from 'react-icons/io5';
 import { FaAngleLeft, FaAngleRight, FaAnglesLeft, FaAnglesRight } from 'react-icons/fa6';
@@ -20,9 +19,6 @@ export interface DataItem {
 
 const CertificationTable = () => {
     const { data, isLoading, isError, error } = useCertData({ page: 1, limit: 10 });
-
-    const [sorting, setSorting] = React.useState<SortingState>([]);
-
 
 
     const preparedData = useMemo(() => data || [], [data]);
@@ -73,7 +69,7 @@ const CertificationTable = () => {
         columnHelper.accessor((row: DataItem) => row.id, {
             id: "action",
             header: "Action",
-            cell: (cell) => {
+            cell: () => {
                 return (
                     <button className='flex items-center gap-x-2 rounded-md bg-[#F0F7F7] text-sm p-2 p-3`'> <IoEye />View</button>
                 );
@@ -90,8 +86,7 @@ const CertificationTable = () => {
         getCoreRowModel: getCoreRowModel(),
         getPaginationRowModel: getPaginationRowModel(),
         getFilteredRowModel: getFilteredRowModel(), //client side filtering
-        getSortedRowModel: getSortedRowModel(),
-        onSortingChange: setSorting,
+        getSortedRowModel: getSortedRowModel()
     });
 
 

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { FaAngleLeft, FaAngleRight, FaBars, FaHome, FaList, FaTimes } from 'react-icons/fa'; // Importing icons
+import { useState } from 'react';
+import { FaAngleLeft, FaAngleRight, FaHome, FaList } from 'react-icons/fa'; // Importing icons
 
 const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);

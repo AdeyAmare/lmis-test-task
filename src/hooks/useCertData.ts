@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { FetchCertDataParams, fetchAllCertData, fetchCertData } from '../services/api';
+import { FetchCertDataParams, fetchAllCertData } from '../services/api';
 
 
 export const useCertData = ({ page, limit }: FetchCertDataParams) => {
