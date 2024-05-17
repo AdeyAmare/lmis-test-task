@@ -39,7 +39,7 @@ const DataByCityChart = () => {
 
 
   return (
-    <div className='bg-white shadow-md rounded-lg h-[40vh] p-5'>
+    <div className='bg-white shadow-md rounded-lg h-[50vh] p-5'>
 
       <h1 className='font-bold text-xl mb-5'>COC by City</h1>
 
